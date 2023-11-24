@@ -1,13 +1,14 @@
-def Calc_SumOfMultiples(limit):
-    a=list()
-    for num in range(limit):
-        if num %3==0 or num % 5==0:
-            a.append(num)
-    print(a)
-    return sum(a)
-        
-number= int(input("Enter a limit number to start : "))    
-result=Calc_SumOfMultiples(number)
-print(result)
-      
+def string_test(s):
+    d={"UPPER_CASE":0, "LOWER_CASE":0}
+    for c in s:
+        if c.isupper():
+           d["UPPER_CASE"]+=1
+        elif c.islower():
+           d["LOWER_CASE"]+=1
+        else:
+           pass
+    print ("Original String : ", s)
+    print ("No. of Upper case characters : ", d["UPPER_CASE"])
+    print ("No. of Lower case Characters : ", d["LOWER_CASE"])
 
+string_test('The quick Brown Fox')
